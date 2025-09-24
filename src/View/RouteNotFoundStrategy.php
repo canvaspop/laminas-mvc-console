@@ -312,6 +312,9 @@ class RouteNotFoundStrategy extends AbstractListenerAggregate
 
                     $tableCols = 2;
                     $tableType = 1;
+                    if (!is_array($table)) {
+                        $table = [];
+                    }
                     $table[]   = [$a, $b];
                     continue;
                 }
